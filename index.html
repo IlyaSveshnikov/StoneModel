@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThrownBody</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Model of a body thrown at an angle to the horizontal</h1>
+
+  <div class="working-space">
+
+    <div class="math-space">
+      <form class="shot-settings">
+        <label for="start_velocity">Start velocity (m/s)</label>
+        <input type="number" name="start_velocity" id="start_velocity" value="10">
+        <label for="start_angel">Start angle (°)</label>
+        <input type="number" name="start_angel" id="start_angle" value="30">
+        <button id="start">Start experiment</button>
+      </form>
+      <div class="shot-info">
+        <div>
+          <p>x = <span id="x">0</span> m</p>
+          <p>y = <span id="y">0</span> m</p>
+          <p>V = <span id="V">0</span> m/s</p>
+        </div>
+        <div>
+          <p>Vx = <span id="Vx">0</span> m/s</p>
+          <p>Vy = <span id="Vy">0</span> m/s</p>
+          <p>t = <span id="t">0</span> s</p>
+        </div>
+      </div>
+      <div class="after-shot-info">
+        <p>Max height: <span id="max_h">0</span> m</p>
+        <p>Time: <span id="time">0</span> s</p>
+        <p>Distance: <span id="dist">0</span> m</p>
+      </div>
+    </div>
+
+    <div class="simulator-space">
+      <div id="y-axis"></div>
+      <div class="simulator" id="simulator">
+        <div id="stone"></div>
+      </div>
+      <div class="x-label">
+        <div>0m</div>
+        <div>Ground</div>
+        <div id="x-axis"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="code.js"></script>
+</body>
+</html>
